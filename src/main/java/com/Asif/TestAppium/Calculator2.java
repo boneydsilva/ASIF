@@ -36,11 +36,11 @@ public static void main(String[] args)throws MalformedURLException{
 	WebDriver driver = new RemoteWebDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
   
 	driver.findElement(By.id("com.android.calculator2:id/digit_7")).click();
-	driver.findElement(By.id("com.android.calculator2:id/digit_7")).click();
-	driver.findElement(By.id("com.android.calculator2:id/digit_7")).click();
-	driver.findElement(By.id("com.android.calculator2:id/digit_7")).click();
-	driver.findElement(By.id("com.android.calculator2:id/digit_7")).click();
-	driver.findElement(By.id("com.android.calculator2:id/digit_7")).click();
+	driver.findElement(By.id("com.android.calculator2:id/digit_6")).click();
+	driver.findElement(By.id("com.android.calculator2:id/digit_5")).click();
+	driver.findElement(By.id("com.android.calculator2:id/digit_4")).click();
+	driver.findElement(By.id("com.android.calculator2:id/digit_3")).click();
+	driver.findElement(By.id("com.android.calculator2:id/digit_2")).click();
 	driver.quit();
 
   
