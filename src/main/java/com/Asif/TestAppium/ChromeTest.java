@@ -16,10 +16,10 @@ import org.openqa.selenium.remote.CapabilityType;
 
 
 
-public class Calculator {
+public class ChromeTest {
 
 
-public static void main(String[] args)throws MalformedURLException{
+public static void main(String[] args)throws MalformedURLException, InterruptedException{
 	//Set up desired capabilities and pass the Android app-activity and app-package to Appium
 	
 	DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -30,16 +30,21 @@ public static void main(String[] args)throws MalformedURLException{
 	capabilities.setCapability("automationName", "Appium");
 	capabilities.setCapability("browserName", "Chrome");
 	capabilities.setCapability("avd", "Nexus_5X_API_28");
+	
+	
 	System.setProperty("webdriver.chrome.driver","C:\\Users\\Boney\\Downloads\\chromedriver_win32\\chromedriver.exe");
 	
 	WebDriver driver = new RemoteWebDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
   
-	driver.get("http://www.facebook.com");
+	driver.get("http://www.amazon.in");
 	System.out.println("Title "+driver.getTitle());
 
-	driver.findElement(By.name("email")).sendKeys("mukesh@gmail.com");
-	driver.findElement(By.name("pass")).sendKeys("mukesh_selenium");
+	driver.findElement(By.name("email")).sendKeys("boneydsilva@gmail.com");
+	driver.findElement(By.name("pass")).sendKeys("@@@boney@@@");
 	driver.findElement(By.id("u_0_5")).click();
+
+	Thread.sleep(10000);
+	
 	driver.quit();
 
   
