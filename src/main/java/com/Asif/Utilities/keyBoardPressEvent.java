@@ -7,6 +7,8 @@ import io.appium.java_client.touch.offset.PointOption;
 public class keyBoardPressEvent {
 
 	public void sendKeys(String str, TouchAction TA) throws InterruptedException {
+		
+		
 		char[] temp = str.toCharArray();
 		
 		for(char c :temp) {
@@ -20,6 +22,8 @@ public class keyBoardPressEvent {
 				int[] Point = KB.UpperCase.getCoordinateA();
 				TA.press(PointOption.point(Point[0], Point[1])).release().perform();
 				 Thread.sleep(900);
+				 
+				 
 				 
 				Point = KB.valueOf(c+"").getCoordinateA();
 				TA.press(PointOption.point(Point[0], Point[1])).release().perform();
