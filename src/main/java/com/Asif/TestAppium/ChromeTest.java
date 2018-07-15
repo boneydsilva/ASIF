@@ -30,6 +30,8 @@ public static void main(String[] args)throws MalformedURLException, InterruptedE
 	capabilities.setCapability("automationName", "Appium");
 	capabilities.setCapability("browserName", "Chrome");
 	capabilities.setCapability("avd", "Nexus_5X_API_28");
+	
+	
 	System.setProperty("webdriver.chrome.driver","C:\\Users\\Boney\\Downloads\\chromedriver_win32\\chromedriver.exe");
 	
 	WebDriver driver = new RemoteWebDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
