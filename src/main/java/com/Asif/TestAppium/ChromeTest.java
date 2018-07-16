@@ -2,8 +2,11 @@ package com.Asif.TestAppium;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.By.ByXPath;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -35,8 +38,9 @@ public static void main(String[] args)throws MalformedURLException, InterruptedE
 	System.setProperty("webdriver.chrome.driver","C:\\Users\\Boney\\Downloads\\chromedriver_win32\\chromedriver.exe");
 	
 	WebDriver driver = new RemoteWebDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
-  
-	driver.get("http://www.amazon.in");
+ 
+	
+	driver.get("https://facebook.com");
 	System.out.println("Title "+driver.getTitle());
 
 	driver.findElement(By.name("email")).sendKeys("boneydsilva@gmail.com");
@@ -45,6 +49,18 @@ public static void main(String[] args)throws MalformedURLException, InterruptedE
 	driver.findElement(By.name("pass")).sendKeys("@@@boney@@@");
 	driver.findElement(By.id("u_0_5")).click();
 
+	Thread.sleep(3000);
+	driver.findElement(By.xpath("//*[@text='OK']")).click();
+	
+	try {
+		Thread.sleep(3000);
+	driver.findElement(By.xpath("//*[@text='BLOCK'] ")).click();}catch(Exception e) {}
+	
+	
+	driver.findElement(By.id("u_0_1n")).click();
+	
+	
+	
 	Thread.sleep(10000);
 	
 	driver.quit();
