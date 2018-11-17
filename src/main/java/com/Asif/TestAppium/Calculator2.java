@@ -41,6 +41,8 @@ public static void main(String[] args)throws MalformedURLException{
 	driver.findElement(By.id("com.android.calculator2:id/digit_4")).click();
 	driver.findElement(By.id("com.android.calculator2:id/digit_3")).click();
 	driver.findElement(By.id("com.android.calculator2:id/digit_2")).click();
+	driver.findElement(By.id("com.android.calculator2:id/digit_2")).click();
+	driver.findElement(By.id("com.android.calculator2:id/digit_2")).click();
 	driver.quit();
 
   

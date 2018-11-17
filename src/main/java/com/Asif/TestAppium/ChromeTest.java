@@ -46,10 +46,14 @@ public static void main(String[] args)throws MalformedURLException, InterruptedE
 	driver.findElement(By.name("email")).sendKeys("boneydsilva@gmail.com");
 	
 	
-	driver.findElement(By.name("pass")).sendKeys("@@@boney@@@");
+	driver.findElement(By.name("pass")).sendKeys("");
 	driver.findElement(By.id("u_0_5")).click();
 
 	Thread.sleep(3000);
+	
+	
+	
+	////////////////////////////////////isssue below this//////////////////////////////////////
 	driver.findElement(By.xpath("//*[@text='OK']")).click();
 	
 	try {
